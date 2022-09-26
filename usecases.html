@@ -48,6 +48,16 @@
             flex-direction: column;
             max-width: 100px;
         }
+        .usecase-thumbnail a {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            max-width: 100px;
+        }
+        .usecase-thumbnail a img{
+      width:100%;
+      height:100%;
+        }
 
         .usecase-card {
             min-height: 600px;
@@ -179,39 +189,60 @@
         <div class="container">
             <div class="row mx-auto justify-content-between">
                 <div class="col usecase-thumbnail">
-                    <img src="./img/usecase/icons-header/wallet-01.jpg" alt="">
+                    <a href="#wallet">
+     <img src="./img/usecase/icons-header/wallet-01.jpg" alt="">
                     <span class="mx-auto">Wallet</span>
+                    </a>
+               
                 </div>
                 <div class="col usecase-thumbnail">
-                    <img src="./img/usecase/icons-header/lending-01.jpg" alt="">
+                    <a href="#lending">
+    <img src="./img/usecase/icons-header/lending-01.jpg" alt="">
                     <span>Lending</span>
+                    </a>
+                
                 </div>
                 <div class="col usecase-thumbnail">
-                    <img src="./img/usecase/icons-header/payment-01.jpg" alt="">
+                    <a href="#payments">
+        <img src="./img/usecase/icons-header/payment-01.jpg" alt="">
                     <span>Payments</span>
+                    </a>
+            
                 </div>
                 <div class="col usecase-thumbnail">
-                    <img src="./img/usecase/icons-header/cashback-01.jpg" alt="">
+                    <a href="#cashback">
+ <img src="./img/usecase/icons-header/cashback-01.jpg" alt="">
                     <span>Cashbacks</span>
+                    </a>
+                   
                 </div>
                 <div class="col usecase-thumbnail">
-                    <img src="./img/usecase/icons-header/trolly-01.jpg" alt="">
+                    <a href="#ecommerce">
+ <img src="./img/usecase/icons-header/trolly-01.jpg" alt="">
                     <span>E-commerce</span>
+                    </a>
+                   
                 </div>
                 <div class="col usecase-thumbnail">
-                    <img src="./img/usecase/icons-header/bank-01.jpg" alt="">
+                    <a href="#neobank">
+ <img src="./img/usecase/icons-header/bank-01.jpg" alt="">
                     <span>Neo Bank</span>
+                    </a>
+                   
                 </div>
                 <div class="col usecase-thumbnail">
+                    <a href="#commodityExchange">
                     <img src="./img/usecase/icons-header/commidity-01.jpg" alt="">
-                    <span> Commodity Exchange</span>
+                                        <span> Commodity Exchange</span>
+                    </a>
+                 
                 </div>
             </div>
         </div>
         <div class="container-fluid mt-5 usecase-cards">
             <div style="">
 
-                <div class="container usecase-card mt-5 p-5">
+                <div class="container usecase-card mt-5 p-5" id="wallet">
                     <div class="usecase-card_header" style="margin-left: -10px;">
                         <img src="./img/usecase/wallet 1.png" alt="">
                         <h4>Wallet</h4>
@@ -276,7 +307,7 @@
 
 
                 </div>
-                <div class="container usecase-card mt-5 p-5">
+                <div class="container usecase-card mt-5 p-5" id="lending">
                     <div class="usecase-card_header" style="margin-left: -10px;">
                         <img src="./img/usecase/cash 1.png" alt="">
                         <h4>Lending</h4>
@@ -341,7 +372,7 @@
 
                 </div>
 
-                <div class="container usecase-card mt-5 p-5">
+                <div class="container usecase-card mt-5 p-5" id="payments">
                     <div class="usecase-card_header" style="margin-left: -10px;">
                         <img src="./img/usecase/pay-per-click 1.png" alt="">
                         <h4>Payments</h4>
@@ -407,7 +438,7 @@
 
                 </div>
 
-                <div class="container usecase-card mt-5 p-5">
+                <div class="container usecase-card mt-5 p-5" id="cashback">
                     <div class="usecase-card_header" style="margin-left: -10px;">
                         <img src="./img/usecase/money-bag 1.png" alt="">
                         <h4>Cash Back</h4>
@@ -463,7 +494,7 @@ A cashback system that can be applied to any kind of cash-based reward program. 
 
 
                 </div>
-                <div class="container usecase-card mt-5 p-5">
+                <div class="container usecase-card mt-5 p-5" id="ecommerce">
                     <div class="usecase-card_header" style="margin-left: -10px;">
                         <img src="./img/usecase/146-basket-trolley-shopping-card-outline (2) 1.png" alt="">
                         <h4>E Commerce</h4>
@@ -521,7 +552,7 @@ A cashback system that can be applied to any kind of cash-based reward program. 
 
 
                 </div>
-                <div class="container usecase-card mt-5 p-5">
+                <div class="container usecase-card mt-5 p-5" id="neobank">
                     <div class="usecase-card_header" style="margin-left: -10px;">
                         <img src="./img/usecase/bank 1.png" alt="">
                         <h4>Neo Bank</h4>
@@ -569,7 +600,7 @@ APIs. Going forward the company’s plan is to acquire the licenses and become a
 
 
                 </div>
-                <div class="container usecase-card mt-5 p-5">
+                <div class="container usecase-card mt-5 p-5" id="commodityExchange">
                     <div class="usecase-card_header" style="margin-left: -10px;">
                         <img src="./img/usecase/943-commodity-outline (1) 1.png" alt="">
                         <h4>Commodity Exchange </h4>
