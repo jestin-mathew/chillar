@@ -38,7 +38,151 @@
     <!-- Template Stylesheet --> <link href="css/contsactus.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
    
-    <style>  </style>
+    <style>  
+    
+    
+    
+.toast1 {
+  visibility: hidden;
+    width: 50vw;
+    max-width: 400px;
+    height: 80px;
+    margin-left: -125px;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin: auto;
+    font-size: 17px;
+    white-space: nowrap;
+    bottom: 0;
+    top: 0;
+}
+.toastTitle{
+    width: 30%;
+    height: 50px;    
+    float: left;    
+    padding: 5px; 
+    text-align: left;
+    white-space: nowrap;
+}
+.toastesc{ 
+    width: 60%;
+    float: left;
+    height: 50px;     
+    padding: 9px;    
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.success {
+    visibility: visible!important;
+    width: 50vw;
+    max-width: 400px;
+    height: 80px;
+    margin-left: -125px;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin: auto;
+    font-size: 17px;
+    white-space: nowrap;
+    bottom: 0;
+    top: 0;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+    color: #fff;
+    background-color: #1E3667;
+    position: fixed;
+}
+.error {
+    visibility: visible!important;
+    width: 50vw;
+    max-width: 400px;
+    height: 80px;
+    margin-left: -125px;
+    margin: auto;
+    text-align: center;
+    border-radius: 8px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin: auto;
+    font-size: 17px;
+    white-space: nowrap;
+    bottom: 0;
+    top: 0;
+    color: #fff;
+    background-color: #D8000C;
+    -webkit-animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 2s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, expand 0.5s 0.5s,stay 3s 1s, shrink 0.5s 4s, fadeout 0.5s 4.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {top: 0; opacity: 0;} 
+    to {top: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {top: 0; opacity: 0;}
+    to {top: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes expand {
+    from {min-width: 50px} 
+    to {min-width: 350px}
+}
+
+@keyframes expand {
+    from {min-width: 50px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes stay {
+    from {min-width: 350px} 
+    to {min-width: 350px}
+}
+
+@keyframes stay {
+    from {min-width: 350px}
+    to {min-width: 350px}
+}
+@-webkit-keyframes shrink {
+    from {min-width: 350px;} 
+    to {min-width: 50px;}
+}
+
+@keyframes shrink {
+    from {min-width: 350px;} 
+    to {min-width: 50px;}
+}
+
+@-webkit-keyframes fadeout {
+    from {top: 30px; opacity: 1;} 
+    to {top: 60px; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {top: 30px; opacity: 1;}
+    to {top: 60px; opacity: 0;}
+}
+    
+    
+    
+    
+    
+    </style>
   </head>
 
   <body>
@@ -129,6 +273,10 @@
 
 
     <!--first section-->
+    <div id="toast1" class="toast1">
+      <div id="toastTitle" class="toastTitle"></div>
+      <div id="toastesc" class="toastesc"></div>
+  </div> 
 
     <section>
       <div class="header text-center">
@@ -208,22 +356,29 @@
               <div class="row">
                 <div class="col-md-6">
                   <label class="label">First name</label>
-                  <input type="text" />
+                  <input id="firstName" class="input" required="true" name ="firstName" type="text" />
+                  <!-- <input type="text" /> -->
                 </div>
                 <div class="col-md-6">
                   <label class="label">Email</label>
-                  <input class="input" type="text" />
+                  <input id="email" name ="email" required="true" class="input" type="email" />
+             
+                  <!-- <input class="input" type="text" /> -->
                 </div>
               </div>
 
               <div class="row mt-3">
                 <div class="col-md-6">
                   <label class="label">Phone</label>
-                  <input class="input" type="text" />
+                  <input id="phone"  name ="phone" required="true" class="input" type="number" />
+         
+                  <!-- <input class="input" type="text" /> -->
                 </div>
                 <div class="col-md-6">
                   <label class="label">Country</label>
-                  <input class="input" type="text" />
+                 
+                  <input id="Country" required="true" class="input" type="text" />
+                  <!-- <input class="input" type="text" /> -->
                 </div>
               </div>
 
@@ -235,38 +390,35 @@
 
               <div class="row mt-2">
                 <div class="col-md-4">
-                  <input type="checkbox" />
+                  <input type="checkbox" id="remittance" name="remittance"/>
                   <label>Remittance</label>
                 </div>
                 <div class="col-md-4">
-                  <input type="checkbox" />
+                  <input type="checkbox" id="Lending" name="Lending"/>
                   <label>Lending</label>
                 </div>
                 <div class="col-md-4">
-                  <input type="checkbox" />
+                  <input type="checkbox" id="neobank" name="neobank"/>
                   <label>Neo bank</label>
                 </div>
               </div>
 
               <div class="row">
                 <div class="col-md-4">
-                  <input type="checkbox" />
-                  <label>Wallet</label>
-                </div>
-                <div class="col-md-4">
-                  <input type="checkbox" />
-                  <label>Ecommerce</label>
-                </div>
-                <div class="col-md-4">
-                  <input type="checkbox" />
-                  <label>Cash back </label>
-                </div>
-              </div>
-
-              <div class="row ">
-                <div class="col-md-4">
-                  <input type="checkbox" />
-                  <label>Payments</label>
+                  <input type="checkbox" id="wallet" name="wallet"/>  
+                        <label for="wallet">Wallet</label>               
+                      </div>
+                      <div class="col-md-4">
+                        <input type="checkbox" id="ecommerce" name="ecommerce"/>
+                        <label for="ecommerce">Ecommerce</label>                     
+                      </div>
+                      <div class="col-md-4">                        
+                        <input type="checkbox" id="cashback" name="cashback"/>
+                        <label for="cashback">Cash back</label>                  
+                      </div>
+                      <div class="col-md-4">                        
+                        <input type="checkbox" id="payments" name="payments"/>
+                        <label for="payments">Payments</label> 
                 </div>
                 <div class="col-md-4">
                   
@@ -285,11 +437,15 @@
               <div class="row mt-1">
                 <div class="col-md-12">
                   
-                  <input style="width: 90%;" class="input" type="text" placeholder="Write your message here...."/>
+                  <input id="Message" required="true" style="width: 90%;" class="input" type="text" placeholder="Write your message here...."/>
                 </div>
                 
               </div>
-              <div style="width: 90%;"><button  class="align-self-end">Send Message</button></div>
+              <div style="width: 90%;">
+                
+                <button type="submit" form="contact_form" onclick="emailTosend()" class="align-self-end">Send Message</button>
+                
+                <!-- <button  class="align-self-end">Send Message</button></div> -->
               
             </form>
           </div>
@@ -422,6 +578,70 @@ Kakkanad, Kerala 682303
    
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script type="text/javascript"
+   src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("wg9NdqrOR7wQ-TveR"); //use your USER ID
+   })();
+</script>
+
+<script>
+
+    function emailTosend(){
+      //alert("hello")
+      //alert(document.getElementById('firstName').value)
+      if(validateInput()){
+          var templateParams = {
+          to_name: 'Sir ',
+          from_name: document.getElementById('firstName').value,
+          contact :document.getElementById('phone').value,
+          Country: document.getElementById('Country').value,
+          message: document.getElementById('Message').value,
+          reply_to: document.getElementById('email').value
+          
+      };
+   
+  emailjs.send('service_fmez7up', 'template_3wha8kb', templateParams) //use your Service ID and Template ID
+      .then(function(response) {
+      
+         launch_toast('Thank you for contacting us. We will get back to you ASAP!','','success')
+         //console.log('SUCCESS!', response.status, response.text);
+      }, function(error) {
+          launch_toast('Error while sending the message','','error')
+         console.log('FAILED...', error);
+      });
+  
+      }
+  
+  }
+  
+  function launch_toast(title,message,type) {
+      var x = document.getElementById("toast1")
+      document.getElementById("toastTitle").innerHTML = title+":";
+      document.getElementById("toastesc").innerHTML = message;
+      x.className = type;
+      setTimeout(function(){ x.className = x.className.replace(type, "toast1"); }, 5000);
+  }
+  
+  function validateInput(){
+      const collection = document.getElementsByClassName("input");
+      let hasInvalidInput = false;
+      Array.from(collection).forEach(element => {
+          if(!element.checkValidity()){
+              hasInvalidInput =true;
+          }
+          element.reportValidity();
+      });
+      return hasInvalidInput?false:true;
+  }
+
+
+
+
 
     </script>
   </body>
